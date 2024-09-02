@@ -1,6 +1,18 @@
 .container{
-    width: 400px;
-    height: auto;
-    margin: 20px;
+    width:max-content;
+    height:auto;
+    margin: auto;
     justify-content: center;
+    text-align: center;
+    background-color: brown;
+}
+.card{
+   width: 400px;
+   height: auto;
+   padding: 0.5rem; 
+}
+
+.card-form-group{
+    width: auto;
+    height: 50px;
 }

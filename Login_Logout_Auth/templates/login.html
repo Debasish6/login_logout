@@ -5,6 +5,32 @@
     <div class="container">
         <div class="card">
             <h1 class="card-heading">Login</h1>
+            <div class="card-body">
+
+                {% if form.non_field_errors %}
+                    {{form.non_field_errors}}
+                {% endif %}
+                <form method="POST" action="{% url 'login' %}">
+                    <!-- <input type="text" placeholder="Enter your username"> -->
+                     {% csrf_token %}
+                     <!-- {{form.as_p}}
+                     <input type="submit" class="card-submit"> -->
+                     <div class="card-form-group">
+                        <label for="{{form.username.id_for_label}}">Username</label>
+                        <input class="card-form-group-input" type="text" name="{{form.username.name}}" value="{{form.username.value}}" placeholder="Enter your username">
+                        <span >{{form.username.errors}}</span>
+                     </div>
+
+                     <div class="card-form-group">
+                        <label for="{{form.password.id_for_label}}">Password</label>
+                        <input class="card-form-group-input" type="password" name="{{form.password.name}}" value="{{form.password.value}}" placeholder="Enter your password">
+                        <span >{{form.password1.errors}}</span>
+                     </div>
+                     <input type="submit" class="card-form-button">
+                     <a href="{% url 'register'%}" class="card-form-anchor">Create a new account</a>
+
+                </form>
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -6,17 +6,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Logout Authentication</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
 </head>
 
 <style>
     .container{
-        width: 400px;
-        height: auto;
-        margin: 20px;
+        width:max-content;
+        height:auto;
+        margin: auto;
+        padding: 0.5rem;
+        border-radius: 12px;
+        justify-content: center;
         text-align: center;
-        
-        background-color: brown;
+        background-color: linen;
+    }
+    .card{
+       width: 400px;
+       height: auto;
+       padding: 0.5rem; 
+    }
+    .card-form-group{
+        width: auto;
+        padding: 0.5rem;
+        height: 50px;
+        font-size: 20px;
+    }
+    .card-form-group-input{
+        height: 25px;
+        border: 2px;
+        border-radius: 8px;
+    }
+    .card-form-button{
+        height: 35px;
+        width: auto;
+        margin: 1rem;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 16px;
+        &:hover{
+            color: brown;
+            background-color: lightblue;
+        }
+    }
+    .card-form-anchor{ 
+        color: black;     
+        &:hover{
+            color: brown;
+            background-color: lightblue;
+        }
     }
 </style>
 
